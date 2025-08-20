@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-export const api = axios.create({ baseURL: '/api' })
+const baseURL = (typeof window !== 'undefined' && (window as any).__APP_API_BASE__) || import.meta.env.VITE_API_BASE_URL || '/api'
+export const api = axios.create({ baseURL })
 
 export type DateRange = { since?: string; until?: string }
 
