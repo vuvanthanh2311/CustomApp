@@ -15,12 +15,6 @@ export function Dashboard() {
     enabled: channels.includes('facebook_ads') && Boolean(userAccessToken),
   })
 
-  const sheetQuery = useQuery({
-    queryKey: ['sheet'],
-    queryFn: () => fetchSheet(),
-    enabled: channels.includes('google_sheets'),
-  })
-
   return (
     <div className="min-h-screen">
       <header className="sticky top-0 z-10 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur">

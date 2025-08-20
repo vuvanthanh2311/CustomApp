@@ -1,4 +1,3 @@
-import React from 'react'
 
 type AdsRow = {
 	ad_id?: string
